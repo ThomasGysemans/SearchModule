@@ -61,3 +61,7 @@ For example, we have a list of fruits:
 Therefore, if the user writes "apple", only the last item will be displayed. However, if the user writes "framboise" or "strawberry", then the second element will be displayed.
 
 For more details, I invite you to look at the example provided in the `src` folder.
+
+## License
+
+MIT License.
