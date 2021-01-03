@@ -47,7 +47,7 @@ Don't forget to add `oninput` attribute to the input:
 
 ## Thanks to what the search bar filters the elements ?
 
-If we keep the above example, we search among the elements that have the class "item". In order for the search bar to work properly, you absolutely need to add a specific attribute to each HTML element that has this class. If you don't do this, an exception will be thrown. This attribute is: `data-keywords`. In this attribute you can write the list of keywords that correspond to each item.
+If we keep the above example, we search among the elements that have the class "item". In order for the search bar to work properly, you absolutely need to add a specific attribute to each HTML element that has this class. This attribute is: `data-keywords`. In this attribute you can write the list of keywords that correspond to each item. Note that capital letters and white spaces are not taken into account (`input.value.trim().toLowerCase()`).
 
 If an element doesn't have the attribute, an error will be thrown in the console (via `console.error()`). Therefore, this element will always be displayed whereas it does'nt correspond to what the user is looking at.
 
