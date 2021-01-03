@@ -5,7 +5,6 @@
             this.items = options.items;
             this.defaultDisplay = options.defaultDisplay || "block";
             this.oninput = options.oninput;
-            this.onEnterKey = options.onEnterKey;
 
             if (!this.input || !this.items) {
                 throw new Error("SearchModule(options) : input parameter and items parameter cannot be null.");
