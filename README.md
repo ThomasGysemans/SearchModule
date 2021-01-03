@@ -45,4 +45,19 @@ Here a table recapitulating the possible parameters to pass to `SearchModule`:
 
 If we keep the above example, we search among the elements that have the class "item". In order for the search bar to work properly, you absolutely need to add a specific attribute to each HTML element that has this class. If you don't do this, an exception will be thrown. This attribute is: `data-keywords`. In this attribute you can write the list of keywords that correspond to each item.
 
-For more details about this attribute, I invite you to look at the example provided in the `src` folder.
+For example, we have a list of fruits:
+
+```
+<div class="list-items">
+    <div class="item" data-keywords="Banana">Banana</div>
+    <div class="item" data-keywords="Strawberry, framboise">Strawberry</div>
+    <div class="item" data-keywords="Raspberry">Raspberry</div>
+    <div class="item" data-keywords="Cherry">Cherry</div>
+    <div class="item" data-keywords="Orange">Orange</div>
+    <div class="item" data-keywords="Apple">Apple</div>
+</div>
+```
+
+Therefore, if the user writes "apple", only the last item will be displayed. However, if the user writes "framboise" or "strawberry", then the second element will be displayed.
+
+For more details, I invite you to look at the example provided in the `src` folder.
