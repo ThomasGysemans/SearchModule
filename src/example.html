@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing SearchModule.js</title>
+
+    <!-- Styles for the example -->
+    <link rel="stylesheet" href="style-example.css">
+
+    <script src="SearchModule.js"></script>
+    <script>
+        var searchModule = new SearchModule({
+            input: "#js-searchbar",
+            items: ".item",
+            defaultDisplay: "flex",
+            oninput: function(value, results) {
+                var search_sentence = document.querySelector("#js-search-sentence");
+                if (value.length > 0) {
+                    if (results === false) {
+                        search_sentence.innerHTML = 'No result for "' + value + '". Try another more general keyword.';
+                    } else {
+                        search_sentence.innerHTML = 'Here are the articles about "' + value + '" :';
+                    }
+                } else {
+                    search_sentence.innerHTML = '';
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <main>
+        <h1>What is your favorite fruit ?</h1>
+
+        <div class="container-searchbar">
+            <input type="search" id="js-searchbar" class="searchbar" maxlength="20" autocapitalize="off" autocomplete="off" placeholder="Rechercher par un mot clé...">
+            <span id="js-search-sentence"></span>
+        </div>
+
+        <div class="list-items">
+            <div class="item" data-keywords="Banana">Banana</div>
+            <div class="item" data-keywords="Strawberry, framboise">Strawberry</div>
+            <div class="item" data-keywords="Raspberry">Raspberry</div>
+            <div class="item" data-keywords="Cherry">Cherry</div>
+            <div class="item" data-keywords="Orange">Orange</div>
+            <div class="item" data-keywords="Apple">Apple</div>
+        </div>
+    </main>
+    
+</body>
+</html>
