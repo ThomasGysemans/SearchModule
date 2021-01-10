@@ -5,14 +5,14 @@ class SearchModule {
         this.oninput = options.oninput;
 
         if (!this.items) {
-            throw new Error("SearchModule(options) : input parameter and items parameter cannot be null.");
+            throw new Error("SearchModule(options) : no items given.");
         }
     }
     
     /// Everytimes that the user writes in the input...
     search(e) {
         if (!e) {
-            throw new Error("SearchModule: you need to pass 'this' (the input) to search: search(this).");
+            throw new Error("SearchModule: you need to pass 'this' (the input) to search.");
         }
 
         var value = e.value.trim().toLowerCase();
