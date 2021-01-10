@@ -1,3 +1,7 @@
+## [1.0.2] - January 10, 2021
+
+Minor changes
+
 ## [1.0.1] - January 3, 2021
 
 Big changes:
