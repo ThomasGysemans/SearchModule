@@ -36,11 +36,11 @@ var searchModule = new SearchModule({
 
 Here a table recapitulating the possible parameters to pass to `SearchModule`:
 
-| Name           | Default    | Type                             | Description                                                                                                                                                                 |
-| -------------- | ---------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| items          | _required_ | string                           | The query selector of the items to filter (needs to be a class)                                                                                                             |
-| defaultDisplay | "block"    | string                           | When an element doesn't correspond to what the user wrote, the element disppear (display:none). We need to make it reappear if the user changes something.                  |
-| oninput        | _null_     | function(v:string, results:bool) | This function is called every time that the user writes in the input. Thanks to `results`, you can know if there are no more results (_false_). Take a look at the example. |
+| Name           | Default    | Type                               | Description                                                                                                                                                                 |
+| -------------- | ---------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| items          | _required_ | `string`                           | The query selector of the items to filter (needs to be a class)                                                                                                             |
+| defaultDisplay | "block"    | `string`                           | When an element doesn't correspond to what the user wrote, the element disppear (display:none). We need to make it reappear if the user changes something.                  |
+| oninput        | _null_     | `function(v:string, results:bool)` | This function is called every time that the user writes in the input. Thanks to `results`, you can know if there are no more results (_false_). Take a look at the example. |
 
 Don't forget to add `oninput` attribute to the input:
 
